@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Particles Background -->
+    <div id="particles-js" class="fixed inset-0 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text hover:scale-105 transition-transform">Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 transition-all">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 transition-all">About</a>
+                    <a href="#portfolio" class="nav-link text-gray-700 hover:text-purple-600 transition-all">Portfolio</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 transition-all">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 relative overflow-hidden">
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        <div class="container mx-auto px-6 text-center text-white relative z-10">
+            <div class="rellax" data-rellax-speed="-2" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span>I am a</span>
+                    <span id="typewriter" class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-100"></span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Turning ideas into interactive realities</p>
+                <a href="#portfolio" class="btn-primary floating-btn bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-arrow-right mr-2"></i>
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text" data-aos="fade-down">About Me</h2>
+            <div class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed" data-aos="fade-up">
+                <p class="mb-8">I'm a passionate web developer with expertise in creating beautiful, functional websites. With a strong foundation in modern web technologies, I bring creativity and technical excellence to every project.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="skill-card p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 transform hover:scale-105 transition-all text-center" data-aos="flip-left" data-aos-delay="100">
+                        <i class="fab fa-html5 text-3xl text-purple-600 mb-2"></i>
+                        <div class="text-purple-600 font-bold text-xl">HTML5</div>
+                    </div>
+                    <div class="skill-card p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 transform hover:scale-105 transition-all text-center" data-aos="flip-left" data-aos-delay="200">
+                        <i class="fab fa-css3-alt text-3xl text-purple-600 mb-2"></i>
+                        <div class="text-purple-600 font-bold text-xl">CSS3</div>
+                    </div>
+                    <div class="skill-card p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 transform hover:scale-105 transition-all text-center" data-aos="flip-left" data-aos-delay="300">
+                        <i class="fab fa-js text-3xl text-purple-600 mb-2"></i>
+                        <div class="text-purple-600 font-bold text-xl">JavaScript</div>
+                    </div>
+                    <div class="skill-card p-6 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 transform hover:scale-105 transition-all text-center" data-aos="flip-left" data-aos-delay="400">
+                        <i class="fab fa-react text-3xl text-purple-600 mb-2"></i>
+                        <div class="text-purple-600 font-bold text-xl">React</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text" data-aos="fade-down">My Projects</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="flex justify-center space-x-4 mb-12" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all" onclick="console.log('All clicked')">
+                    <i class="fas fa-th-large mr-2"></i>All
+                </button>
+                <button class="filter-btn" data-filter="web" onclick="console.log('Web clicked')">
+                    <i class="fas fa-globe mr-2"></i>Web
+                </button>
+                <button class="filter-btn" data-filter="app" onclick="console.log('App clicked')">
+                    <i class="fas fa-mobile-alt mr-2"></i>App
+                </button>
+                <button class="filter-btn" data-filter="design" onclick="console.log('Design clicked')">
+                    <i class="fas fa-paint-brush mr-2"></i>Design
+                </button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="images/65d93d11e4f9d59e32511405a78e51d6.jpg" alt="E-Commerce Platform" class="w-full h-48 object-cover object-center">
+                        </div>
+                        <!-- Default Content -->
+                        <div class="project-content p-6 bg-white">
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">E-Commerce Platform</h3>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">A full-stack e-commerce solution with real-time inventory management</p>
+                        </div>
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay">
+                            <div class="project-details">
+                                <p class="text-sm mb-4">
+                                    Built a scalable e-commerce platform featuring real-time inventory tracking, 
+                                    secure payment processing, and an intuitive admin dashboard. Implemented 
+                                    responsive design and optimized performance.
+                                </p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github mr-2"></i>View Code
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="design">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="images/0e475d3f6fe5b322a493fdb4e741bedd.jpg" alt="Portfolio Website" class="w-full h-48 object-cover object-center">
+                        </div>
+                        <!-- Default Content -->
+                        <div class="project-content p-6 bg-white">
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Creative Portfolio</h3>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">TailwindCSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Modern portfolio website with smooth animations and responsive design</p>
+                        </div>
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay">
+                            <div class="project-details">
+                                <p class="text-sm mb-4">
+                                    Designed and developed a modern portfolio website featuring smooth 
+                                    animations, responsive layout, and optimized performance. Implemented 
+                                    advanced CSS effects and interactive elements.
+                                </p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github mr-2"></i>View Code
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="images/50b651e30638da3849ee2fe88d0e9fe5.jpg" alt="Blog Platform" class="w-full h-48 object-cover object-center">
+                        </div>
+                        <!-- Default Content -->
+                        <div class="project-content p-6 bg-white">
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">Modern Blog Platform</h3>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Prisma</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Full-featured blog platform with CMS integration and modern design</p>
+                        </div>
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay">
+                            <div class="project-details">
+                                <p class="text-sm mb-4">
+                                    Developed a full-featured blog platform with CMS integration, 
+                                    user authentication, and dynamic content management. Features include 
+                                    markdown support and automated image optimization.
+                                </p>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github mr-2"></i>View Code
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text" data-aos="fade-down">Get in Touch</h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
+                <!-- Contact Info -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Let's Connect</h3>
+                    <p class="text-gray-600 mb-8">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-gray-700">Email</h4>
+                                <p class="text-gray-600">abdisamadquurow@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-gray-700">Location</h4>
+                                <p class="text-gray-600">San Francisco, CA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-gray-700">Phone</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="form-group">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="text" id="name" name="name" class="form-input w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="Your name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="email" id="email" name="email" class="form-input w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="Your email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <div class="relative">
+                                <i class="fas fa-pencil-alt absolute left-3 top-4 text-gray-400"></i>
+                                <textarea id="message" name="message" rows="5" class="form-textarea w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="Your message" required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transform hover:-translate-y-1 transition-all flex items-center justify-center space-x-2">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2024 Web Developer Portfolio. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="social-link hover:text-purple-400 transition-colors transform hover:scale-110">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="social-link hover:text-purple-400 transition-colors transform hover:scale-110">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="social-link hover:text-purple-400 transition-colors transform hover:scale-110">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
